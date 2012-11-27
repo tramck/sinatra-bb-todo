@@ -12,16 +12,11 @@
   </div>
 </body>
 <script id="item-template" type="text/template">
-  <div class="todo <%%= done ? 'done' : '' %>">
-    <div class="display">
-      <input class="check" type="checkbox" <%%= done ? 'checked="checked"' : '' %> />
-      <div class="todo-text"></div> 
-      <button class="todo-destroy">Destroy</button>
-    </div>
-    <div class="edit">
-      <input class="todo-input" type="text" value="" />
-    </div>
-  </div>
+  <tr class="todo <%%= done ? 'done' : '' %>">
+    <td><input class="check" type="checkbox" <%%= done ? 'checked="checked"' : '' %> /></td>
+    <td class="edit"><input class="todo-input" type="text" value="" /></td>
+    <td><button class="todo-destroy btn">Delete</button></td>
+  </tr>
 </script>
 
 <script id="stats-template" type="text/template">

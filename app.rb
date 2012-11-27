@@ -1,9 +1,10 @@
 require 'rubygems'
 require 'sinatra'
-require 'sqlite3'
 require 'json'
 require 'dm-sqlite-adapter'
 require 'data_mapper'
+
+settings.server = "mongrel"
 
 # Set up database and Todo model
 DataMapper.setup(:default, "sqlite3:db/todo.db")
@@ -15,6 +16,8 @@ class Todo
   property :text, String
   property :done, Boolean
 end
+
+DataMapper.finalize
 
 # tell tilt to use .html.erb instead of .erb
 Tilt.register Tilt::ERBTemplate, 'html.erb'

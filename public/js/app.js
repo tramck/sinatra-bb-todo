@@ -39,7 +39,7 @@ var Todos = new TodoList;
 // TodoView
 var TodoView = Backbone.View.extend({
   
-  tagname: "li",
+  tagName: "span",
   
   template: _.template($('#item-template').html()),
   
